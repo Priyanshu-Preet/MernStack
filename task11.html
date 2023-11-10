@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 5</title>
+</head>
+<body>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container
+        {
+            font-family: monospace;
+            width:95vw;
+            margin: 5vh;
+            height: 90vh;
+            background-color: #dadada;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px black;
+        }
+        input
+        {
+            width: 400px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 15px
+        }
+
+        label
+        {
+            font-size: 15px;
+            margin: 10px;
+        }
+        button
+        {
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            background-color: rgb(53, 100, 255);
+            color: #ffff;
+            border-radius: 5px;
+            border:none;
+            font-size: larger;
+            margin: 25px;
+            cursor: pointer;
+        }
+
+        .answer
+        {
+            width: fit-content;
+            height:fit-content;
+            margin: 25px;
+            font-size: 15px;
+            color: red;
+        }
+
+        .feild
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin: 10px;
+        }
+        #name,#email
+        {
+            margin-left: 21px;
+        }
+    </style>
+
+
+    <div class="container">
+        <div class="feild">
+            <label for="name">Name : </label>
+            <input id="name" type="text" placeholder="Enter name">
+            <div class="answer" id="i1"></div>
+        </div>
+        <div class="feild">
+            <label for="email">Email : </label>
+            <input id="email" type="email" placeholder="Enter email">
+            <div class="answer" id="i2"></div>
+        </div>
+        <div class="feild">
+            <label for="website">Website : </label>
+            <input id="website" type="url" placeholder="Enter URL">
+            <div class="answer" id="i3"></div>
+        </div>
+        <div class="feild">
+            <label for="message">Message : </label>
+            <textarea name="message" id="message" cols="55" rows="10"></textarea>
+            <div class="answer" id="i4"></div>
+        </div>
+
+
+
+
+        <button onclick="validate()">Submit</button>
+    
+    </div>
+
+
+    <script>
+        function validate(){
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let website = document.getElementById("website").value;
+            let msg = document.getElementById("message").value;
+            
+            if(name == "")
+            {
+                document.querySelector("#i1").innerHTML = `This feild is required`;
+            }
+            if(email == "")
+            {
+                document.querySelector("#i2").innerHTML = `This valid email is required`;
+            }
+            if(website == "")
+            {
+                document.querySelector("#i3").innerHTML = `This valid url is required`;
+            }
+            if(msg == "")
+            {
+                document.querySelector("#i4").innerHTML = `This feild is required`;
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>
