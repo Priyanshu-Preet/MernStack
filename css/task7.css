@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.main
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Poppins';
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container nav
+{
+    display: flex;
+    justify-self: center;
+    border: 1px solid black;
+    margin-top: 50px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.vertical
+{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background-color: aqua;
+    padding: 10px;
+
+}
+
+.vertical li
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+    font-size: x-large;
+    width: 100%;
+    text-align: center;
+}
+
+.vertical li :hover
+{
+    background-color: rgb(255, 123, 28);
+}
+
+.vertical li a
+{
+    text-decoration: none;
+    color: blue;
+    width: 100%;
+}
+
+.home
+{
+    width: 100%;
+}
+
+.horiz{
+    display: flex;
+    list-style: none;
+    background-color: rgb(103, 103, 103);
+}
+
+.horiz li 
+{
+    padding: 10px;
+}
+
+.horiz li:hover
+{
+    background-color: black;
+    color: #ffff;
+}
+
+.horiz li a
+{
+    margin: 10px;
+    font-size: large;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    color: #ffff;
+    text-decoration: none;
+}
