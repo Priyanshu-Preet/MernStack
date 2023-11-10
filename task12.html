@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <title>JS Task 6</title>
+</head>
+<body>
+
+    <style>
+        *
+        {
+            margin: 0;
+            padding:0;
+        }
+
+        body
+        {
+            height: 100%;
+            width: 100%;
+            background-color: #dadada;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container
+        {
+            width: 30vw;
+            height: fit-content;
+            background-color: #ffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            margin-top: 25vh;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #b8b8b8;
+            margin-bottom: 25px;
+        }
+        .feild
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px;
+            width: 80%;
+            height: fit-content;
+            border: 0.5px solid rgb(128, 128, 128);
+            border-radius: 3px;
+        }
+
+        input
+        {
+            width: 80%;
+            height: 25px;
+            font-size: medium;
+            padding: 5px;
+            outline: none;
+            border-radius: 0px 3px 3px 0px;
+            border: none;
+        }
+        i
+        {
+            font-size: medium;
+            padding: 10px;
+            background-color: rgb(199, 199, 199);
+            border-radius: 3px 0px 0px 3px;
+        }
+        button
+        {
+            margin:15px;
+            width: 80%;
+            padding: 10px;
+            background-color: rgb(32, 121, 255);
+            color: #ffff;
+            font-size: large;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .bottom
+        {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            font-size: medium;
+
+        }
+        #check
+        {
+            width: 15px;
+            height: 15px;
+        }
+        a
+        {
+            text-decoration: none;
+            color:rgb(32, 121, 255) ;
+            text-decoration: underline;
+        }
+
+    </style>
+
+
+    <div class="container">
+        <h1>Instagram</h1>
+        <div class="feild">
+            <i class="ri-user-fill"></i>
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="feild">
+            <i class="ri-lock-password-fill"></i>
+            <input type="password" placeholder="Password">
+        </div>
+        <button>Log In</button>
+        <div class="bottom">
+            <div>
+                <input type="checkbox" name="remember" id="check">
+                <label for="remember">Remember Me</label>
+            </div>
+            <a href="#">Forgot Password ?</a>
+        </div>
+    </div>
+    <p>Don't have an account! <a href="#">Sign Up </a>here </p>
+    
+</body>
+</html>
