@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 8</title>
+</head>
+<body>
+<style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+    body
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+    }
+    .main
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(252,83,194);
+        background: linear-gradient(0deg, rgba(252,83,194,1) 0%, rgba(241,255,0,1) 100%);
+        width: 100%;
+        height: 100vh;
+        
+
+    }
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+    h1
+    {
+        margin: 10px;
+        margin-top: 0px;
+    }
+    input
+    {
+        outline: none;
+        border: none;
+        border-radius: 3px;
+    }
+    table td
+    {
+        padding: 5px;
+    }
+    button
+    {
+        margin-top: 20px;
+        height: fit-content;
+        padding: 5px;
+        background-color: rgb(255, 25, 71);
+        color: #ffff;
+        border: none;
+        font-size: large;
+        border-radius: 3px;
+    }
+
+    .declare
+    {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    .login
+    {
+        align-self: flex-end;
+    }
+    .remark
+    {
+        display: none;
+        font-size: small;
+        border: none;
+        color: red;
+        margin: 2px;
+    }
+
+</style>
+
+    <div class="main">
+        <form action="">
+            <h1>Registration form</h1>
+            <table border="1">
+                <tr class="element">
+                    <td>First Name</td>
+                    <td><input type="text" id="fname"></td>
+                    <td class="remark" id="r1"></td>
+                </tr>
+                <tr class="element">
+                    <td>Last Name</td>
+                    <td><input type="text" id="lname"></td>
+                    <td class="remark" id="r2"></td>
+                </tr>
+                <tr class="element">
+                    <td>Email</td>
+                    <td><input type="email" id="email"></td>
+                    <td class="remark" id="r3"></td>
+                </tr>
+                <tr class="element">
+                    <td>Password</td>
+                    <td><input type="password" id="password"></td>
+                    <td class="remark" id="r4"></td>
+                </tr>
+                <tr class="element">
+                    <td>Re-enter Password</td>
+                    <td><input type="password" id="repassword"></td>
+                    <td class="remark" id="r5"></td>
+                </tr>
+                <tr class="element">
+                    <td>Gender</td>
+                    <td>
+                    <span class="gender-option">
+                        <input type="radio" id = "male" value="Male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" value="Female">
+                        <label for="female">Female</label>
+                    </span>
+                    </td>
+                </tr>
+                <tr class="element">
+                    <td>Age</td>
+                    <td><input type="text" id="age"></td>
+                    <td class="remark" id="r6"></td>
+                </tr>
+                <tr class="element">
+                    <td>Phone Number</td>
+                    <td><input type="text" id="phone"></td>
+                    <td class="remark" id="r7"></td>
+                </tr>
+                <tr class="element">
+                    <td>Address</td>
+                    <td><textarea cols="50" id="address"></textarea></td>
+                    <td class="remark" id="r8"></td>
+                </tr>
+                <tr class="element">
+                    <td>State</td>
+                    <td><input type="text" id="state"></td>
+                    <td class="remark" id="r9"></td>
+                </tr>
+                <tr class="element">
+                    <td>Country</td>
+                    <td>
+                    <select name="country" id="country">
+                        <option value="default" selected>Choose your country</option>
+                        <option value="india">India</option>
+                    </select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        Languages known
+                    </td>
+                    <td>
+                        <input type="checkbox" name="english" id="english">
+                        <label for="english">English</label>
+                        <input type="checkbox" name="kannada" id="kannada">
+                        <label for="kannada">Kannada</label>
+                        <input type="checkbox" name="Hindi" id="Hindi">
+                        <label for="Hindi">Hindi</label>
+                        <input type="checkbox" name="Telugu" id="Telugu">
+                        <label for="Telugu">Telugu</label>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="declare">
+                <input type="checkbox" name="declare" id="declare">
+                <label for="declare">Hereby I declare all the given details are true.</label>
+            </div>
+            <div class="login">
+                Log in to <a href="#">Ethnus</a> website
+            </div>
+        </form>
+        <button onclick="validate()">Register</button>
+    </div>
+
+    <script>
+        function validate()
+        {
+            let fname = document.querySelector("#fname").value;
+            let lname = document.querySelector("#lname").value;
+            let email = document.querySelector("#email").value;
+            let password = document.querySelector("#password").value;
+            let repassword = document.querySelector("#repassword").value;
+            let age = document.querySelector("#age").value;
+            let phone = document.querySelector("#phone").value;
+            let address = document.querySelector("#address").value;
+            let state = document.querySelector("#state").value;
+
+            if(fname == "")
+            {
+                document.querySelector("#r1").style.display = 'inline';
+                document.querySelector("#r1").innerHTML = "POOR";
+            }
+
+            if(lname == "")
+            {
+                document.querySelector("#r2").style.display = 'inline';
+                document.querySelector("#r2").innerHTML = "POOR";
+            }
+
+            if(email == "")
+            {
+                document.querySelector("#r3").style.display = 'inline';
+                document.querySelector("#r3").innerHTML = "POOR";
+            }
+
+            if(password == "")
+            {
+                document.querySelector("#r4").style.display = 'inline';
+                document.querySelector("#r4").innerHTML = "POOR";
+            }
+
+            if(repassword == "" || repassword!=password)
+            {
+                document.querySelector("#r5").style.display = 'inline';
+                document.querySelector("#r5").innerHTML = "POOR or Mismatch";
+            }
+
+            if(age == "")
+            {
+                document.querySelector("#r6").style.display = 'inline';
+                document.querySelector("#r6").innerHTML = "POOR";
+            }
+
+            if(phone.length != 10)
+            {
+                document.querySelector("#r7").style.display = 'inline';
+                document.querySelector("#r7").innerHTML = "POOR";
+            }
+
+            if(address == "")
+            {
+                document.querySelector("#r8").style.display = 'inline';
+                document.querySelector("#r8").innerHTML = "POOR";
+            }
+
+            if(state == "")
+            {
+                document.querySelector("#r9").style.display = 'inline';
+                document.querySelector("#r9").innerHTML = "POOR";
+            }
+        }
+    </script>
+</body>
+</html>
