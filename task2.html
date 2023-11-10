@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <title>Task2</title>
+</head>
+<body class="bg-warning d-flex flex-column">
+
+    <style>
+      .carousel-item img
+      {
+        height: 75vh;
+        object-fit: cover;
+        filter: brightness(0.5);
+      }
+
+      .card-container
+      {
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .card
+      {
+        width: 33vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <div class="header px-5 py-2 pb-0">
+        <div class="header-top d-flex justify-content-between align-items-center">
+            <h1 class="fw-bolder">Builderz</h1>
+            <div class="d-flex ">
+                <span class="px-4 d-flex"> <i class="ri-calendar-fill fs-4 px-4"></i> <p>Opening hour <br> Mon - Fri, 8:00 - 9:00</p></span>
+                <span class="px-4 d-flex"><i class="ri-customer-service-2-fill fs-4 px-4"></i><p>Call Us <br> +012 345 6789</p></span>
+                <span class="px-4 d-flex"><i class="ri-mail-add-fill fs-4 px-4"></i><p>Email Us <br> info@example.com</p></span>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-warning" aria-current="page text-warning" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Service</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Projects</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pages
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://plus.unsplash.com/premium_photo-1664474871121-131e63f14315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGNvbnN0cnVjdGlvbiUyMHdvcmtlcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&h=250&q=60" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block mb-5">
+              <h3>We are professional</h3>
+              <h1 class="fw-bolder my-2">For your Dream Project</h1>
+              
+              <button class="btn border border-light text-light rounded-0 my-2">GET A QUOTE</button>
+            </div>
+      
+          </div>
+          <div class="carousel-item">
+            <img src="https://plus.unsplash.com/premium_photo-1681823170578-6957756c5b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2667&q=80" class="d-block w-100 " alt="...">
+            <div class="carousel-caption d-none d-md-block mb-5">
+              <h3>We are professional</h3>
+              <h1 class="fw-bolder my-2">For your Dream Project</h1>
+              
+              <button class="btn border border-light text-light rounded-0 my-2">GET A QUOTE</button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block mb-5">
+              <h3>We are professional</h3>
+              <h1 class="fw-bolder my-2">For your Dream Project</h1>
+              
+              <button class="btn border border-light text-light rounded-0 my-2">GET A QUOTE</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="card-container d-flex w-100">
+        <div class="card bg-dark rounded-0">
+          <div class="card-body text-warning d-flex justify-content-center align-items-center">
+            <i class="ri-user-6-fill px-4 fs-1"></i>
+            <div>
+              <h5 class="fw-bolder">Expert Worker</h5>
+              <p class="fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque neque officia corporis quam aut modi quae perspiciatis quia dolorum necessitatibus.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-warning rounded-0">
+          <div class="card-body text-dark d-flex justify-content-center align-items-center">
+            <i class="ri-building-fill px-4 fs-1"></i>
+            <div>
+              <h5 class="fw-bolder">Quality Work</h5>
+              <p class="fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque neque officia corporis quam aut modi quae perspiciatis quia dolorum necessitatibus.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-dark rounded-0">
+          <div class="card-body text-warning d-flex justify-content-center align-items-center">
+            <i class="ri-customer-service-2-fill px-4 fs-1"></i>
+            <div>
+              <h5 class="fw-bolder">24/7 Support</h5>
+              <p class="fs-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque neque officia corporis quam aut modi quae perspiciatis quia dolorum necessitatibus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>
