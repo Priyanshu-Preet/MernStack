@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 3</title>
+</head>
+<body>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container
+        {
+            font-family: monospace;
+            width:95vw;
+            margin: 5vh;
+            height: 90vh;
+            background-color: #dadada;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px black;
+        }
+        .container h1
+        {
+            margin: 25px;
+            font-size: 50px;
+        }
+        input
+        {
+            width: 375px;
+            height: 30px;
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+            font-size: 15px;
+            margin: 10px;
+        }
+
+        label
+        {
+            font-size: 15px;
+        }
+
+        button
+        {
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            background-color: rgb(53, 100, 255);
+            color: #ffff;
+            border-radius: 5px;
+            border:none;
+            font-size: larger;
+            margin: 25px;
+            cursor: pointer;
+        }
+
+        .answer
+        {
+            width: 375px;
+            height:fit-content;
+            margin: 25px;
+            font-size: 20px;
+            padding-left: 100px;
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Calculate</h1>
+        <div>
+            <label for="input 1">Number 1 : </label>
+            <input id="input1" type="number" placeholder="Enter number 1">
+        </div>
+        
+        <div>
+            <label for="input2">Number 2 : </label>
+            <input id="input2" type="number" placeholder="Enter number 2">
+        </div>
+
+        
+        <div>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+
+        <div class="answer"></div>
+
+    </div>
+
+
+    <script>
+        function multiply(){
+            var num1 = document.querySelector("#input1").value;
+            var num2 = document.querySelector("#input2").value;
+            document.querySelector(".answer").innerHTML = `Answer after Multiplying : ${num1 * num2}`;
+        }
+
+        function divide(){
+            var num1 = document.querySelector("#input1").value;
+            var num2 = document.querySelector("#input2").value;
+            document.querySelector(".answer").innerHTML = `Answer after Dividing : ${num1 / num2}`;
+        }
+    </script>
+</body>
+</html>
